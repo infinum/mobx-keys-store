@@ -11,6 +11,21 @@
     "test": "npm run build:test && npm run run:test",
     "precommit": "npm run lint && npm test"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infinum/mobx-keys-store.git"
+  },
+  "keywords": [
+    "mobx",
+    "keys",
+    "store",
+    "key/value",
+    "observable"
+  ],
+  "bugs": {
+    "url": "https://github.com/infinum/mobx-keys-store/issues"
+  },
+  "homepage": "https://github.com/infinum/mobx-keys-store#readme",
   "author": "Infinum <javascript.team@infinum.co>",
   "license": "MIT",
   "devDependencies": {
