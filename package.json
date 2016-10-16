@@ -6,10 +6,11 @@
   "scripts": {
     "build": "NODE_ENV=production webpack",
     "build:test": "webpack --config webpack.test.js",
+    "build:add": "git add dist/KeysStore.js",
     "run:test": "mocha --require source-map-support/register dist/test.js",
     "lint": "eslint src/* tests/* webpack.*",
     "test": "npm run build:test && npm run run:test",
-    "precommit": "npm run lint && npm test"
+    "precommit": "npm run lint && npm test && npm run build:add"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,12 @@
   },
   "homepage": "https://github.com/infinum/mobx-keys-store#readme",
   "author": "Infinum <javascript.team@infinum.co>",
+  "contributors": [
+    {
+      "name": "Darko Kukovec",
+      "email": "darko@infinum.co"
+    }
+  ],
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.17.0",
