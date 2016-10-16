@@ -49,19 +49,21 @@ export default class KeysStore {
    * Increase the key value by one
    *
    * @param {String} key - Key that needs to be increased
+   * @param {Number} amount - The amount that should be used to increase the value
    * @return {undefined}
    */
-  @action increaseItem(key) {
-    this[key]++;
+  @action increaseItem(key, amount = 1) {
+    this[key] += amount;
   }
 
   /**
    * Decrease the key value by one
    *
    * @param {String} key - Key that needs to be decreased
+   * @param {Number} amount - The amount that should be used to decrease the value
    * @return {undefined}
    */
-  @action decreaseItem(key) {
-    this[key]--;
+  @action decreaseItem(key, amount = 1) {
+    this[key] -= amount;
   }
 }
