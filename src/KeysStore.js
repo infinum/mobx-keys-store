@@ -1,6 +1,6 @@
 import {action, extendObservable} from 'mobx';
 
-export default class KeysStore {
+class KeysStore {
 
   /**
    * Initialize the store
@@ -67,3 +67,5 @@ export default class KeysStore {
     this[key] -= amount;
   }
 }
+
+module.exports = KeysStore;
