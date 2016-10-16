@@ -48,7 +48,7 @@
     "source-map-support": "^0.4.3",
     "webpack": "^1.13.2"
   },
-  "peerDependencies": {
+  "dependencies": {
     "mobx": "^2.6.0"
   }
 }
