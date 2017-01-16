@@ -49,6 +49,6 @@
     "webpack": "^1.13.2"
   },
   "dependencies": {
-    "mobx": "^2.6.0"
+    "mobx": "^3.0.0"
   }
 }
