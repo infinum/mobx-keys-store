@@ -9,7 +9,7 @@ const config = {
   module: {
     loaders: [{
       test: /.js$/,
-      loader: 'babel'
+      loader: 'babel-loader'
     }]
   },
   plugins: [],
