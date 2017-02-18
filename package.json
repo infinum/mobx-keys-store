@@ -1,6 +1,6 @@
 {
   "name": "mobx-keys-store",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Keys store for MobX",
   "main": "dist/KeysStore.js",
   "scripts": {
