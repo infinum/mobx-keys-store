@@ -1,16 +1,19 @@
 {
   "name": "mobx-keys-store",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Keys store for MobX",
-  "main": "dist/KeysStore.js",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "license": "MIT",
   "scripts": {
-    "build": "NODE_ENV=production webpack",
-    "build:test": "webpack --config webpack.test.js",
-    "build:add": "npm run build && git add dist/KeysStore.js",
-    "run:test": "mocha --require source-map-support/register dist/test.js",
-    "lint": "eslint src/* tests/* webpack.*",
-    "test": "npm run build:test && npm run run:test",
-    "precommit": "npm run lint && npm test && npm run build:add"
+    "build": "ntsc --outDir ./dist --experimentalDecorators --target es5 --module commonjs --declaration --pretty src/index.ts",
+    "test": "NODE_ENV=test nyc mocha",
+    "lint": "tslint './src/**/*.ts'",
+    "watch": "nodemon -e .ts -i node_modules -i dist -i coverage -x mocha",
+    "docs": "typedoc --mode file --theme minimal --tsconfig ./tsconfig.json --excludePrivate --out ./docs ./src",
+    "docs:add": "npm run docs && git add docs/",
+    "dist:add": "npm run build && git add dist/",
+    "precommit": "npm run lint && npm test && npm run dist:add && npm run docs:add"
   },
   "repository": {
     "type": "git",
@@ -20,7 +23,6 @@
     "mobx",
     "keys",
     "store",
-    "key/value",
     "observable"
   ],
   "bugs": {
@@ -34,21 +36,43 @@
       "email": "darko@infinum.co"
     }
   ],
-  "license": "MIT",
-  "devDependencies": {
-    "babel-core": "^6.17.0",
-    "babel-eslint": "^7.0.0",
-    "babel-loader": "^6.2.5",
-    "babel-plugin-transform-decorators-legacy": "^1.3.4",
-    "babel-preset-es2015": "^6.16.0",
-    "chai": "^3.5.0",
-    "eslint": "^3.8.0",
-    "husky": "^0.13.0",
-    "mocha": "^3.1.2",
-    "source-map-support": "^0.4.3",
-    "webpack": "^2.2.1"
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "exclude": [
+      "src/interfaces/*",
+      "test/*"
+    ],
+    "sourceMap": true,
+    "instrument": true,
+    "cache": false,
+    "reporter": [
+      "lcov",
+      "text",
+      "text-summary"
+    ]
   },
-  "dependencies": {
-    "mobx": "^3.0.1"
+  "devDependencies": {
+    "@types/chai": "^3.5.0",
+    "@types/mocha": "^2.2.40",
+    "@types/node": "^7.0.12",
+    "chai": "^3.5.0",
+    "husky": "^0.13.3",
+    "mobx": "^3.1.9",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0",
+    "ntypescript": "^1.201609302242.1",
+    "nyc": "^10.2.0",
+    "ts-node": "^2.1.2",
+    "tslint": "^4.5.1",
+    "typedoc": "^0.5.10",
+    "typescript": "^2.3.0"
+  },
+  "peerDependencies": {
+    "mobx": "^2.7.0 || ^3"
   }
 }

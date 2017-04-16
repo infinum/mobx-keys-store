@@ -1,9 +1,12 @@
-/* global describe, it */
+// tslint:disable:max-classes-per-file
+// tslint:disable:no-string-literal
+
+import {autorun, useStrict} from 'mobx';
+useStrict(true);
 
 import {expect} from 'chai';
-import {autorun} from 'mobx';
 
-import KeysStore from '../src/KeysStore';
+import KeysStore from '../src';
 
 describe('KeysStore', function() {
   it('should initialize', function() {
@@ -18,7 +21,7 @@ describe('KeysStore', function() {
       bar: 'baz'
     });
 
-    expect(store.foo).to.equal(1);
+    expect(store.getItem('foo')).to.equal(1);
     expect(store.bar).to.equal('baz');
     expect(store.baz).to.be.an('undefined');
   });
