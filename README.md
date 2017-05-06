@@ -1,5 +1,7 @@
 # mobx-keys-store
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/infinum/mobx-keys-store.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/infinum/mobx-keys-store.svg?branch=master)](https://travis-ci.org/infinum/mobx-keys-store)
 [![Dependency Status](https://david-dm.org/infinum/mobx-keys-store.svg)](https://david-dm.org/infinum/mobx-keys-store)
 [![devDependency Status](https://david-dm.org/infinum/mobx-keys-store/dev-status.svg)](https://david-dm.org/infinum/mobx-keys-store#info=devDependencies)
