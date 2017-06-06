@@ -68,7 +68,7 @@
     "ntypescript": "^1.201609302242.1",
     "nyc": "^11.0.2",
     "ts-node": "^3.0.4",
-    "tslint": "^5.2.0",
+    "tslint": "5.4.2",
     "typedoc": "^0.7.0",
     "typescript": "^2.3.0"
   },
