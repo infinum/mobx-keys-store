@@ -14,8 +14,13 @@ Keys store for MobX
 
 * [Docs](https://github.com/infinum/mobx-keys-store/wiki/API-reference)
 
-# License
+## License
 
-The MIT License
+The [MIT License](https://github.com/infinum/mobx-collection-store/blob/master/LICENSE)
 
-![](https://assets.infinum.co/assets/brand-logo-9e079bfa1875e17c8c1f71d1fee49cf0.svg) © 2017 Infinum Inc.
+## Credits
+
+mobx-keys-store is maintained and sponsored by
+[Infinum](http://www.infinum.co).
+
+<img src="https://infinum.co/infinum.png" width="264">
