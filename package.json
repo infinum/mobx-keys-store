@@ -67,7 +67,7 @@
     "nodemon": "^1.11.0",
     "ntypescript": "^1.201609302242.1",
     "nyc": "^11.0.2",
-    "ts-node": "^3.0.4",
+    "ts-node": "^4.0.0",
     "tslint": "^5.2.0",
     "typedoc": "^0.8.0",
     "typescript": "^2.3.0"
