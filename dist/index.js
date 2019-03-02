@@ -5,8 +5,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var mobx_1 = require("mobx");
-var KeysStore = (function () {
+var KeysStore = /** @class */ (function () {
     /**
      * Initialize the store
      *
@@ -25,10 +26,10 @@ var KeysStore = (function () {
      * @return {undefined}
      */
     KeysStore.prototype.setItem = function (key, value) {
+        var _a;
         mobx_1.extendObservable(this, (_a = {},
             _a[key] = value,
             _a));
-        var _a;
     };
     /**
      * Get a key
@@ -70,16 +71,15 @@ var KeysStore = (function () {
         if (amount === void 0) { amount = 1; }
         this[key] -= amount;
     };
+    __decorate([
+        mobx_1.action
+    ], KeysStore.prototype, "setItem", null);
+    __decorate([
+        mobx_1.action
+    ], KeysStore.prototype, "increaseItem", null);
+    __decorate([
+        mobx_1.action
+    ], KeysStore.prototype, "decreaseItem", null);
     return KeysStore;
 }());
-__decorate([
-    mobx_1.action
-], KeysStore.prototype, "setItem", null);
-__decorate([
-    mobx_1.action
-], KeysStore.prototype, "increaseItem", null);
-__decorate([
-    mobx_1.action
-], KeysStore.prototype, "decreaseItem", null);
-Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = KeysStore;
